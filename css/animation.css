@@ -1,0 +1,93 @@
+/* 
+ * This rule resets the margin and padding for all elements to 0 and ensures consistent box-sizing across all elements.
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+ * Styling for the .container class. This defines the size, background color, border, and animation properties.
+ */
+.container {
+    width: 100px;
+    /* The width of the container is set to 100px */
+    height: 200px;
+    /* The height of the container is set to 200px */
+    background-color: aqua;
+    /* Initial background color is aqua */
+    border: 2px solid black;
+    /* A 2px solid black border around the container */
+
+    /* 
+     * This animation moves the container as per the keyframes defined in the @keyframes anni section.
+     */
+    animation-name: anni;
+    animation-duration: 4s;
+    /* The animation takes 4 seconds to complete one cycle */
+    animation-iteration-count: infinite;
+    /* The animation runs indefinitely */
+
+    /* Optional: Uncomment to delay the start of the animation by 2 seconds */
+    /* animation-delay: 2s; */
+
+    animation-direction: alternate;
+    /* The animation alternates between forward and reverse */
+
+    /* 
+     * This defines the timing of the animation using a cubic-bezier 
+     * for a custom easing effect.
+     */
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    /* Allows the container to move within its parent using the left/top properties */
+}
+
+/* 
+ * Keyframes for the animation. These control the position and background color of the container at different points in the animation.
+ */
+@keyframes anni {
+    0% {
+        left: 0;
+        /* Container starts at the top-left corner */
+        top: 0;
+        background-color: aquamarine;
+        /* Starts with aquamarine background color */
+    }
+
+    25% {
+        left: 200px;
+        /* Moves the container to the right */
+        top: 0;
+        background-color: red;
+        /* Changes the background color to red */
+    }
+
+    50% {
+        left: 200px;
+        /* Keeps the container on the right */
+        top: 200px;
+        /* Moves the container down */
+        background-color: yellow;
+        /* Changes the background color to yellow */
+    }
+
+    75% {
+        left: 0;
+        /* Moves the container back to the left */
+        top: 200px;
+        /* Keeps the container at the bottom */
+        background-color: green;
+        /* Changes the background color to green */
+    }
+
+    100% {
+        left: 0;
+        /* Moves the container back to the top-left */
+        top: 0;
+        background-color: cadetblue;
+        /* Changes the background color to cadetblue */
+    }
+}
