@@ -1,0 +1,51 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container
+{
+    width: 60%;
+    height: 300px;
+    margin: auto;
+    padding: 20px;
+    /* border: 1px solid black; */
+    border-radius: 07px;
+    background-image: linear-gradient(to left, #000046, #1CB5E0);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container h1
+{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 44px;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+    
+}
+.container label
+{
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+.container input
+{
+    border: none;
+    background: none;
+    border-bottom: 2px solid white;
+    color: white;
+    outline: none;
+    font-size: 16px;
+}
+.container input[type=button]
+{
+    width: 50%;
+    height: 50px;
+    color: white;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 24px;
+}

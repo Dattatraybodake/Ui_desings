@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Products</title>
+
+    <!-- JavaScript code for calculating the bill -->
+    <script type="text/javascript">
+        // Declare variables to hold input values
+        var a, b, c;
+
+        // Function to calculate the bill
+        function Calculate() {
+            // Get the price of products from the input field with id 'f'
+            a = document.getElementById("f").value;
+
+            // Get the quantity of products from the input field with id 's'
+            b = document.getElementById("s").value;
+
+            // Calculate the total bill by multiplying price and quantity
+            c = parseInt(a) * parseInt(b);
+
+            // Display the calculated bill in the heading with id 'h1'
+            document.getElementById("h1").innerHTML = "Bill is " + c;
+        }
+    </script>
+
+    <!-- CSS styling for the page -->
+    <style>
+        /* Reset default margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for the main container */
+        .container {
+            background-image: linear-gradient(#ED213A, #93291E); /* Gradient background */
+            width: 60%;
+            height: 300px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        /* Styling for the main heading */
+        .container h1 {
+            font-size: 44px;
+            color: white;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Styling for labels */
+        .container label {
+            font-size: 32px;
+            color: white;
+        }
+
+        /* Styling for text input fields */
+        .container input[type="text"] {
+            border-radius: 7px; /* Rounded corners */
+            height: 30px;
+            color: white;
+            outline: none; /* Remove outline */
+            border: none;
+            background: none;
+            /* border-bottom: 2px solid black; Bottom border */
+        }
+
+        /* Styling for the button */
+        .container input[type="button"] {
+            border-radius: 5px; /* Rounded corners */
+            width: 50%;
+            height: 40px;
+            align-items: center;
+            border: none;
+            background: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Main container for the billing form -->
+    <div class="container">
+        <h1>Billing Products</h1>
+
+        <!-- Input field for the price of products -->
+        <label for="f">Price of Products: </label>
+        <input type="text" name="first" id="f" /><br><br>
+
+        <!-- Input field for the quantity of products -->
+        <label for="s">Quantity of Products: </label>
+        <input type="text" name="second" id="s" /><br><br>
+
+        <!-- Button to trigger the Calculate function -->
+        <input type="button" name="calculate" value="Calculate Bill" onclick="Calculate()" />
+
+        <!-- Heading to display the calculated bill -->
+        <h1 id="h1"></h1>
+    </div>
+</body>
+</html>
